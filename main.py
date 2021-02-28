@@ -9,11 +9,14 @@ myscreen.bgcolor("black")
 myscreen.setup(width=800, height=600)
 myscreen.tracer(0)
 
-myscoreboard = Scoreboard()
+
 
 r_player = Player((350, 0))
 l_player = Player((-350, 0))
 ball = Ball()
+
+myscoreboard = Scoreboard()
+myscoreboard.update_scoreboard()
 
 myscreen.listen()
 myscreen.onkeypress(r_player.go_up, "Up")
